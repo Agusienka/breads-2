@@ -1,22 +1,25 @@
 {
   "name": "breads",
   "version": "1.0.0",
+  "engines": {
+    "node": "14.15.4"
+  },
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Agusienka/BREADS.git"
+    "url": "git+https://github.com/Agusienka/breads-2.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Agusienka/BREADS/issues"
+    "url": "https://github.com/Agusienka/breads-2/issues"
   },
-  "homepage": "https://github.com/Agusienka/BREADS#readme",
+  "homepage": "https://github.com/Agusienka/breads-2#readme",
   "dependencies": {
     "dotenv": "^16.0.1",
     "express": "^4.18.1",

@@ -32,7 +32,7 @@ baker.get('/:id', (req, res) => {
 })
 
 // delete
-baker.delete('/:_id', (req, res) => {
+baker.delete('/:id', (req, res) => {
     Baker.findByIdAndDelete(req.params.id) 
       .then(deletedBaker => { 
         res.status(303).redirect('/breads')

@@ -1,12 +1,22 @@
 // DEPENDENCIES
-const express = require('express')
+const sslRedirect = require('heroku-ssl-redirect').default;
+const express = require('express');
+const app = express(); 
 const methodOverride = require('method-override')
 const mongoose = require('mongoose');
+
+
+
+
+ 
+
+
+
 
 // CONFIGURATION
 require('dotenv').config()
 const PORT = process.env.PORT
-const app = express()
+
 mongoose.connect(
   process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true },
   () => {
@@ -14,6 +24,12 @@ mongoose.connect(
   }
 )
 // MIDDLEWARE
+
+app.use(sslRedirect());
+app.get('/breads', function(req, res){
+  res.send('hello world');
+});
+
 app.use(methodOverride('_method'))
 app.use(express.urlencoded({ extended: true }))
 app.use(express.static('public'))
